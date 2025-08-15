@@ -1,0 +1,26 @@
+<script setup lang="ts">
+import ChatRoom from "./components/ChatRoom.vue";
+</script>
+
+<template>
+  <ChatRoom />
+</template>
+
+<style>
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f5f5;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+}
+</style>

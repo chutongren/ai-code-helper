@@ -45,6 +45,24 @@ class AiCodeHelperServiceTest {
     }
 
     @Test
+    void chatWithTools() {
+        String result = aiCodeHelperService.chat("有哪些常见的计算机网络面试题？");
+        System.out.println(result);
+    }
+
+    @Test
+    void chatWithMcp() {
+        String result = aiCodeHelperService.chat("LLM领域，最新的新闻？");
+        System.out.println(result);
+    }
+
+    @Test
+    void chatWithGuardrail() {
+        String result = aiCodeHelperService.chat("kill the game");
+        System.out.println(result);
+    }
+
+    @Test
     void testModels() {
         assertNotNull(embeddingModel);
     }
