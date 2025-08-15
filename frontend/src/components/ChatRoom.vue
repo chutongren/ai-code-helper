@@ -1,8 +1,8 @@
 <template>
   <div class="chat-room">
     <div class="chat-header">
-      <h1>🤖 AI 编程小助手</h1>
-      <p class="session-id">会话ID: {{ memoryId }}</p>
+      <h1>🤖 AI Code Helper</h1>
+      <p class="session-id">chatID: {{ memoryId }}</p>
     </div>
 
     <div class="messages" ref="messagesContainer">
@@ -27,7 +27,7 @@
         <input
           v-model="inputMessage"
           @keyup.enter="sendMessage"
-          placeholder="输入你的编程问题或面试问题..."
+          placeholder="Input your coding problem or interview question..."
           :disabled="isLoading"
           class="message-input"
         />
@@ -199,7 +199,7 @@ onMounted(() => {
   memoryId.value = generateMemoryId();
   messages.value.push({
     sender: "ai",
-    text: "👋 你好！我是你的 AI 编程小助手 🤖\n\n我可以帮你：\n• 解答编程学习问题\n• 提供面试题建议\n• 代码审查和优化\n• 学习路线规划\n\n请告诉我你需要什么帮助？",
+    text: "👋 Hello! I’m your AI Programming Assistant 🤖\n\nI can help you:\n• Answer programming learning questions\n• Provide interview question suggestions\n• Review and optimize code\n• Plan your learning roadmap\n\nPlease tell me what you need help with?",
     timestamp: new Date(),
   });
   scrollToBottom();

@@ -1,6 +1,6 @@
 <template>
   <div class="chat-room">
-    <div class="chat-header">AI 编程小助手 (会话ID: {{ memoryId }})</div>
+    <div class="chat-header">AI Code Helper (chatID: {{ memoryId }})</div>
     <div class="messages" ref="messagesContainer">
       <div
         v-for="(message, index) in messages"
@@ -16,7 +16,7 @@
       <input
         v-model="inputMessage"
         @keyup.enter="sendMessage"
-        placeholder="输入你的问题..."
+        placeholder="Input your coding problem or interview question..."
         :disabled="isLoading"
       />
       <button @click="sendMessage" :disabled="isLoading">
